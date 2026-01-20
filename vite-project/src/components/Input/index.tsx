@@ -1,6 +1,7 @@
+import React from "react"
 import styled from "styled-components"
 
-const Input = styled.input`
+const StyledInput = styled.input`
         border: 1px solid #FFF;
         background: transparent;
         border: 1px solid #FFF;
@@ -17,4 +18,8 @@ const Input = styled.input`
         }
 `
 
-export default Input
+type Props = React.InputHTMLAttributes<HTMLInputElement>
+
+export default function Input(props: Props) {
+  return <StyledInput {...props} />
+}
