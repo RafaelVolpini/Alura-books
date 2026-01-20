@@ -6,7 +6,7 @@ import styled from 'styled-components';
     display: flex;
     padding: 0 0;
 `
-    
+
 export const IconsList = styled.li`
   min-width: 120px;
   font-size: 16px;
@@ -30,7 +30,7 @@ export default function IconsHeader () {
         <IconsContainer>
           {icones.map((icone) => (
             <IconsList key={icone}>
-              <img src={icone} alt='icone' ></img>
+              <img src={icone} alt='icone'></img>
             </IconsList>
           ))}
         </IconsContainer>
