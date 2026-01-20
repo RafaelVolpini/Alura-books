@@ -1,7 +1,9 @@
-import Sacola from '../../images/sacola.svg';
-import Profile from '../../images/perfil.svg';
-import './style.css'
+import { IconsList } from '../IconsHeader';
+import styled from 'styled-components';
 
+const OptionsContainer = styled.ul`
+    display: flex;
+    `
 
 export default function OpcoesHeader() {
     const opcoesTexto = ['Categorias', 'Minha Estante', 'Favoritos'];
@@ -9,13 +11,13 @@ export default function OpcoesHeader() {
 
     return (
         <>
-        <ul className='options'>
+        <OptionsContainer className='options'>
           {opcoesTexto.map((opcaoTexto) => (
-            <li key={opcaoTexto} className='option'>{opcaoTexto}</li>
+            <IconsList key={opcaoTexto}>
+              {opcaoTexto}
+            </IconsList>
           ))}
-        </ul>
-
-        
+        </OptionsContainer>
         </>
     );
 }
